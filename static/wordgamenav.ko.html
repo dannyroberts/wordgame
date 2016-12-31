@@ -1,0 +1,8 @@
+<h1>Puzzles</h1>
+<ul class="nav nav-pills nav-stacked">
+<!--ko foreach: puzzleNames-->
+	<li>
+<a data-bind="text: 'Puzzle :id'.replace(':id', $data), attr: {href: '/puzzle/:id'.replace(':id', $data)}"></a>
+</li>
+<!--/ko-->
+</ul>

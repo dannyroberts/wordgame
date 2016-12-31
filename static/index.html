@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/static/jspm_packages/github/twbs/bootstrap@3.3.7/css/bootstrap.css" type="text/css" media="screen">
+		
+		<link rel="stylesheet" href="/static/wordgame.css">
+	</head>
+	<body>
+		<navbar></navbar>
+		<div class="container">
+			<div id="main">
+				<!--ko if: page() === 'nav'-->
+				<wordgamenav></wordgamenav>
+				<!--/ko-->
+				<!--ko if: page() === 'puzzle'-->
+				<wordgame params="puzzleName: ctx().params.id"></wordgame>
+				<!--/ko-->
+			</div>
+		</div>
+		<script src="/static/jspm_packages/system.js"></script>
+		<script src="/static/config.js"></script>
+		<script>
+			System.import('wordgame.js');
+			System.import('bootstrap')
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "wordgame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wordgame.js",
+  "dependencies": {
+    "jspm": "^0.16.48"
+  },
+  "devDependencies": {
+    "jspm": "^0.16.48"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "jspm": {
+    "dependencies": {
+      "bootstrap": "github:twbs/bootstrap@^3.3.7",
+      "jquery": "npm:jquery@^3.1.1",
+      "knockout": "github:knockout/knockout@^3.4.1",
+      "lodash": "npm:lodash@^4.17.3",
+      "page": "npm:page@^1.7.1",
+      "text": "github:systemjs/plugin-text@^0.0.9"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}

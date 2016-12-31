@@ -1,0 +1,20 @@
+ul.chunk-list {
+	font-size: 2em;
+	list-style: none;
+	text-align: left;
+}
+ul.chunk-list li {
+	width: 5em;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid white;
+}
+ul.chunk-list li:hover {
+	background-color: #eee;
+	border: 1px solid #ccc;
+}
+.game-over {
+	font-size: 3em;
+}

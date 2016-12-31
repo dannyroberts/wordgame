@@ -1,0 +1,51 @@
+<h1>Puzzle <!--ko text: puzzleName--><!--/ko--></h1>
+<div class="row">
+	<div class="col-md-6">
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th class="col-md-6">Clue</th>
+					<th class="col-md-2">Letters</th>
+					<th class="col-md-4">Word</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: words">
+				<tr>
+					<td class="col-md-6"><em data-bind="text: clue"></em></td>
+					<td class="col-md-2"><span data-bind="text: word.length"></span> letters</td>
+					<td class="col-md-4">
+						<!--ko if: guessed-->
+						<span class="glyphicon glyphicon-ok"></span>
+						<strong data-bind="text: word"></strong>
+						<!--/ko-->
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="col-md-6 well">
+		<div class="pull-left">
+			<!--ko foreach: staged-->
+				<span class="btn btn-lg btn-default" data-bind="click: $parent.unstage"><!--ko text: text --><!--/ko--></span>
+			<!--/ko-->
+		</div>
+		<button class="btn btn-success btn-lg pull-right" data-bind="click: submitStaged, attr: {disabled: !staged().length}" type="button">Try</button>
+	</div>
+</div>
+<!--ko if: !gameOver()-->
+<ul data-bind="foreach: allChunks" class="chunk-list">
+	<!--ko if: isVisible-->
+	<li data-bind="click: $parent.stage">
+		<span data-bind="text: text"></span>
+	</li>
+	<!--/ko-->
+	<!--ko if: !isVisible()-->
+	<li>
+	</li>
+	<!--/ko-->
+</ul>
+<!--/ko-->
+<!--ko if: gameOver-->
+<p class="game-over">You Win!</p>
+<!--/ko-->
