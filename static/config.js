@@ -1,5 +1,6 @@
 System.config({
   baseURL: "/static/",
+  production: true,
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
